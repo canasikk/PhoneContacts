@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EntitiyLayer.Concrete
 {
-    public class Users
+    public class User
     {
+        [Key]
         public int UUID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
