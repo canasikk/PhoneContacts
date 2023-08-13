@@ -18,10 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EntitiyFramework\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EntitiyLayer\EntitiyLayer.csproj" />
   </ItemGroup>
 

@@ -1,6 +1,24 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
 }
+@using EntitiyLayer.Concrete
+@model List<User>
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<table>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>Adınız : @item.FirstName</td>
+        <td>Soyadınız : @item.LastName</td>
+        <td>Şirketiniz : @item.Company</td>
+        <td>Telefon : @item.PhoneNumber</td>
+        <td>EMail : @item.EMail</td>
+        <td>Konumunuz : @item.Location</td>
+        <td><a href="?Edit=@item.UUID">Düzenle</a></td>
+        <td><a href="?Delete=@item.UUID">Sil</a></td>
+    </tr>
+   
+    }
+</table>
+ 

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntitiyFramework;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using PhoneContacts.Models;
 using System;
@@ -17,7 +19,7 @@ namespace PhoneContacts.Controllers
         {
             _logger = logger;
         }
-
+        UserManager userManager = new UserManager(new EfUserDal());
         public IActionResult Index()
         {
             return View();
@@ -25,7 +27,8 @@ namespace PhoneContacts.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            var values = userManager.TGetList();
+            return View(values);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
