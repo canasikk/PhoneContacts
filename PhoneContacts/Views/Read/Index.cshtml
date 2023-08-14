@@ -28,7 +28,7 @@
                 <td>@item.PhoneNumber</td>
                 <td>@item.EMail</td>
                 <td>@item.Location</td>
-                <td><a class="btn btn-info" href="?Edit=@item.UUID">Düzenle</a> <a class="btn btn-danger" href="?Edit=@item.UUID">Düzenle</a> <a href="?Edit=@item.UUID">Düzenle</a></td>
+                <td><a class="btn btn-info" asp-controller="Delete" asp-action="Index" asp-route-id="@item.UUID">Düzenle</a> <a class="btn btn-danger" href="?Edit=@item.UUID">Düzenle</a> <a href="?Edit=@item.UUID">Düzenle</a></td>
             </tr>
         }
     </tbody>

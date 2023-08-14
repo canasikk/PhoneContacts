@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 
 namespace PhoneContacts.Controllers
 {
-    public class AddController : Controller
+    public class DeleteController : Controller
     {
         UserManager userManager = new UserManager(new EfUserDal());
+
         [HttpGet]
         public PartialViewResult Index()
         {
@@ -20,9 +21,10 @@ namespace PhoneContacts.Controllers
 
         [HttpPost]
         public IActionResult Index(User u)
-        {
-            userManager.TAdd(u);
-            return View();
+        { 
+            userManager.TDelete(u);
+            return RedirectToAction("Read","Index");
         }
+
     }
 }
