@@ -1,10 +1,11 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
 @using EntitiyLayer.Concrete
 @model List<User>
-<h1>@ViewData["Title"]</h1>
- 
+
 <table id="example" class="table table-striped dataTable" style="width: 100%;" aria-describedby="example_info">
     <thead>
         <tr>
@@ -27,10 +28,10 @@
                 <td>@item.PhoneNumber</td>
                 <td>@item.EMail</td>
                 <td>@item.Location</td>
-                <td><a class="btn btn-info" href="?Edit=@item.UUID">Düzenle</a> <a  class="btn btn-danger" href="?Edit=@item.UUID">Düzenle</a> <a href="?Edit=@item.UUID">Düzenle</a></td>
+                <td><a class="btn btn-info" href="?Edit=@item.UUID">Düzenle</a> <a class="btn btn-danger" href="?Edit=@item.UUID">Düzenle</a> <a href="?Edit=@item.UUID">Düzenle</a></td>
             </tr>
         }
-        </tbody>
-    
+    </tbody>
+
 </table>
- 
+
